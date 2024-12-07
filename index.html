@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Old school music</title>
+    <style>
+        h1{
+           text-align: center; 
+           font-size: 30px;
+           font-weight: bold;
+           text-decoration: overline;
+           color: aliceblue;
+        }
+        h2 , h3{text-align: center;
+            font: size 24px; 
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 20px;
+            text-decoration: underline;
+            color: aliceblue;
+
+        }
+    
+        .Style-image {
+            width: 500px;
+            display: flex;
+            
+
+
+        }
+        .image-container{
+            display:flex;
+         justify-content: center;
+         padding: 20px;
+        }
+        p{
+            text-align: center;
+            font-size: 24px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 30px;
+            background-color: black;
+            color: aliceblue;
+        }
+        body{
+            background-color: black;
+            padding: 20px;
+        }
+        ul{
+            list-style-type: none;
+        }
+        li{
+            color: aliceblue;
+            background-color: rgb(16, 16, 16);
+            font: size 25px; 
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding:20px
+        }
+        .music-name{
+            font-size: 20px;
+            padding: 12px;
+            color: pink;
+            text-align: center;
+        }
+        .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+button {
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+button:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00f7, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+h4{
+    font-size: 18px;
+    font-family: monospace;
+    color: white;
+    text-align: center;
+}
+
+
+        
+    </style>
+</head>
+<body>
+    <h1>Old School Music</h1>
+    <h2>I love music</h2>
+    <div class="image-container">
+    <img src="oldschoolmusic.png" alt="Old School Music" class="Style-image">
+    </div>
+    <p> Welcome to the ultimate destination for lovers of timeless
+         tunes and classic melodies! Our Old School Music website 
+         is a nostalgic journey through the golden eras of music,
+        where each note carries the essence of bygone decades. 
+        Whether you're a seasoned aficionado or just beginning 
+        to explore the rich tapestry of musical history, our
+        platform is your gateway to rediscovering iconic tracks,
+        legendary artists, and unforgettable moments in music.
+        From the swinging rhythms of the '50s to the rebellious
+        anthems of the '90s, we celebrate the enduring legacy
+        of old-school music that continues to captivate 
+        hearts and minds across generations. Join us as we 
+        dive into the melodies that shaped cultures, defined 
+        generations, and still resonate with the soul today.
+        Welcome aboard this musical time machine – let the 
+        journey begin! </p>
+    <h3> Top 5 music </h3>
+    <ul>
+        <li><div class="music-name">▷Johnny B. Goode" by Chuck Berry (1958)</div>- A pioneering rock
+             and roll anthem with its infectious guitar riff and 
+             energetic lyrics
+            </li>
+        <li><div class="music-name">▷Respect" by Aretha Franklin (1967) </div>- A soulful empowerment
+             anthem that became a signature song for the Queen of Soul
+            </li>
+        <li><div class="music-name">▷I Want to Hold Your Hand" by The Beatles (1963)</div> - A catchy 
+            and infectious pop-rock hit that helped launch the
+             British Invasion
+            </li>
+        <li><div class="music-name">▷Bohemian Rhapsody" by Queen (1975)</div> - A groundbreaking rock 
+            opera that defied convention and showcased Queen's 
+            musical innovation
+        </li>
+        <li><div class="music-name">▷Bohemian Rhapsody" by Queen (1975) </div>- A groundbreaking rock 
+            opera that defied convention and showcased Queen's musical
+             innovation
+            </li>
+        
+    </ul>
+    <div class="button-container">
+    <button>Do you love Music ?</button>
+    </div>
+
+    
+<script>
+       function DoYouLoveMusic() {
+    let Music = prompt("Do you love old school music ,Yes or No?");
+    let Rate = parseFloat(prompt("Rate from 1 to 10 ?"));
+    let button = document.querySelector("button");
+
+        if (Rate > 5) {
+            button.innerHTML = "😊<br> I'm happy you love Old School music this much, "+ Rate+ "% ." ;
+        } else {
+            button.innerHTML = "😔<br> I'm very sad you  dont love Old School music that much, "+ Rate+ "% ." ;
+        }
+    
+}
+
+let applyButton = document.querySelector("button");
+applyButton.addEventListener("click", DoYouLoveMusic);
+
+    </script>
+    <h4>
+        coded by Pamela Mthiyane
+    </h4>
+</body>
+</html>
